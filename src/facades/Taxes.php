@@ -1,7 +1,7 @@
 <?php namespace professionalweb\taxes\facades;
 
 use Illuminate\Support\Facades\Facade;
-use professionalweb\taxes\services\TaxFacade;
+use professionalweb\taxes\interfaces\TaxFacade;
 
 /**
  * Static proxy for \professionalweb\taxes\facades
