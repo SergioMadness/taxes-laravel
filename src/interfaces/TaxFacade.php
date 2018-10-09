@@ -18,9 +18,9 @@ interface TaxFacade extends TaxService
     /**
      * Get current driver name
      *
-     * @return TaxFacade
+     * @return TaxService
      */
-    public function getCurrentDriver(): ?TaxFacade;
+    public function getCurrentDriver(): ?TaxService;
 
     /**
      * Get name of current driver
@@ -53,5 +53,5 @@ interface TaxFacade extends TaxService
      *
      * @return null|TaxFacade
      */
-    public function driverInstance(string $driver): ?TaxFacade;
+    public function driverInstance(string $driver): ?TaxService;
 }

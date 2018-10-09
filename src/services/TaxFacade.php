@@ -1,6 +1,7 @@
 <?php namespace professionalweb\taxes\services;
 
 use professionalweb\taxes\interfaces\Receipt;
+use professionalweb\taxes\interfaces\TaxService;
 use professionalweb\taxes\interfaces\TaxFacade as ITaxFacade;
 
 /**
@@ -19,7 +20,7 @@ class TaxFacade implements ITaxFacade
     /**
      * Current driver
      *
-     * @var ITaxFacade
+     * @var TaxService
      */
     private $currentDriver;
 
@@ -88,9 +89,9 @@ class TaxFacade implements ITaxFacade
     /**
      * Get current driver name
      *
-     * @return ITaxFacade
+     * @return TaxService
      */
-    public function getCurrentDriver(): ?ITaxFacade
+    public function getCurrentDriver(): ?TaxService
     {
         return $this->currentDriver;
     }
@@ -135,9 +136,9 @@ class TaxFacade implements ITaxFacade
      *
      * @param string $driver
      *
-     * @return null|ITaxFacade
+     * @return null|TaxService
      */
-    public function driverInstance(string $driver): ?ITaxFacade
+    public function driverInstance(string $driver): ?TaxService
     {
         if (($driverClass = $this->getDriver($driver)) !== null) {
             return app($driverClass, [
