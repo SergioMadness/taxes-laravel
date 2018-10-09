@@ -1,6 +1,7 @@
 <?php namespace professionalweb\taxes\facades;
 
 use Illuminate\Support\Facades\Facade;
+use professionalweb\taxes\services\TaxFacade;
 
 /**
  * Static proxy for \professionalweb\taxes\facades
@@ -10,6 +11,6 @@ class Taxes extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return '\Taxes';
+        return TaxFacade::class;
     }
 }
