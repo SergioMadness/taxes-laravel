@@ -9,6 +9,36 @@ use Illuminate\Contracts\Support\Arrayable;
 interface Receipt extends Arrayable
 {
     /**
+     * общая СН
+     */
+    public const TAX_SYSTEM_COMMON = 1;
+
+    /**
+     * упрощенная СН (доходы)
+     */
+    public const TAX_SYSTEM_SIMPLE_INCOME = 2;
+
+    /**
+     * упрощенная СН (доходы минус расходы)
+     */
+    public const TAX_SYSTEM_SIMPLE_NO_OUTCOME = 3;
+
+    /**
+     * единый налог на вмененный доход
+     */
+    public const TAX_SYSTEM_SIMPLE_UNIFIED = 4;
+
+    /**
+     * единый сельскохозяйственный налог
+     */
+    public const TAX_SYSTEM_SIMPLE_AGRO = 5;
+
+    /**
+     * патентная СН
+     */
+    public const TAX_SYSTEM_SIMPLE_PATENT = 5;
+
+    /**
      * Get contact
      *
      * @return string

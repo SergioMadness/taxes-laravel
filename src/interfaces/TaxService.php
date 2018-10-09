@@ -10,4 +10,11 @@ interface TaxService
      * @return mixed
      */
     public function sendReceipt(Receipt $receipt);
+
+    /**
+     * Get tax service options
+     *
+     * @return array
+     */
+    public function getOptions(): array;
 }

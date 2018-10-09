@@ -8,6 +8,11 @@ use Illuminate\Contracts\Support\Arrayable;
  */
 interface ReceiptItem extends Arrayable
 {
+    public const TAX_18 = 1;
+    public const TAX_10 = 2;
+    public const TAX_0 = 3;
+    public const TAX_NO = 4;
+
     /**
      * Get quantity
      *

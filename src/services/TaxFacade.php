@@ -161,4 +161,16 @@ class TaxFacade implements ITaxFacade
 
         return $driver !== null ? $driver->sendReceipt($receipt) : null;
     }
+
+    /**
+     * Get tax service options
+     *
+     * @return array
+     */
+    public function getOptions(): array
+    {
+        $driver = $this->getCurrentDriver();
+
+        return $driver !== null ? $driver->getOptions() : [];
+    }
 }
