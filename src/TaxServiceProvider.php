@@ -10,13 +10,13 @@ class TaxServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $loader = AliasLoader::getInstance();
-        $loader->alias('TaxFacade', TaxFacade::class);
+        $loader->alias('Taxes', TaxFacade::class);
     }
 
     public function register(): void
     {
         $facade = new TaxFacade();
-        $this->app->instance('\TaxFacade', $facade);
+        $this->app->instance('\Taxes', $facade);
         $this->app->instance(ITaxFacade::class, $facade);
     }
 }
