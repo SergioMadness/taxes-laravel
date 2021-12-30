@@ -1,12 +1,10 @@
 <?php namespace professionalweb\taxes\interfaces;
 
-use Illuminate\Contracts\Support\Arrayable;
-
 /**
  * Interface for receipt
  * @package professionalweb\taxes\interfaces
  */
-interface Receipt extends Arrayable
+interface Receipt
 {
     /**
      * общая СН

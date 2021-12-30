@@ -1,12 +1,10 @@
 <?php namespace professionalweb\taxes\interfaces;
 
-use Illuminate\Contracts\Support\Arrayable;
-
 /**
  * Interface for receipt item
  * @package professionalweb\taxes\interfaces
  */
-interface ReceiptItem extends Arrayable
+interface ReceiptItem
 {
     public const TAX_18 = 1;
     public const TAX_10 = 2;

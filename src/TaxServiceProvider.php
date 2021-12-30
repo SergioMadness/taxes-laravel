@@ -16,8 +16,6 @@ class TaxServiceProvider extends ServiceProvider
 
     public function register(): void
     {
-        $facade = new TaxFacade();
-        $this->app->instance('\Taxes', $facade);
-        $this->app->instance(ITaxFacade::class, $facade);
+        $this->app->singleton(ITaxFacade::class, TaxFacade::class);
     }
 }

@@ -9,7 +9,7 @@ use professionalweb\taxes\interfaces\TaxFacade;
  */
 class Taxes extends Facade
 {
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
         return TaxFacade::class;
     }

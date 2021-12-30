@@ -2,7 +2,7 @@
 
 use professionalweb\taxes\interfaces\Receipt as IReceipt;
 
-abstract class Receipt implements IReceipt
+class Receipt implements IReceipt
 {
     /**
      * Phone number or e-mail
@@ -31,9 +31,9 @@ abstract class Receipt implements IReceipt
     /**
      * Receipt constructor.
      *
-     * @param string     $contact
-     * @param array|null $items
-     * @param int        $taxSystem
+     * @param string|null $contact
+     * @param array|null  $items
+     * @param int|null    $taxSystem
      */
     public function __construct(string $contact = null, array $items = [], int $taxSystem = null)
     {

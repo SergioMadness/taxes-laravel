@@ -71,7 +71,7 @@ class TaxFacade implements ITaxFacade
      *
      * @return null|string
      */
-    public function getDriver($name): ?string
+    public function getDriver(string $name): ?string
     {
         return $this->getDrivers()[$name];
     }

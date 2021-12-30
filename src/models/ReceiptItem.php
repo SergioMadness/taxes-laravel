@@ -2,7 +2,7 @@
 
 use professionalweb\taxes\interfaces\ReceiptItem as IReceiptItem;
 
-abstract class ReceiptItem implements IReceiptItem
+class ReceiptItem implements IReceiptItem
 {
     /**
      * Quantity
@@ -43,11 +43,11 @@ abstract class ReceiptItem implements IReceiptItem
     /**
      * ReceiptItem constructor.
      *
-     * @param string $name
-     * @param int    $qty
-     * @param float  $price
-     * @param int    $tax
-     * @param string $currency
+     * @param string|null $name
+     * @param int|null    $qty
+     * @param float|null  $price
+     * @param int|null    $tax
+     * @param string      $currency
      */
     public function __construct(string $name = null, int $qty = null, float $price = null, int $tax = null, string $currency = 'RUR')
     {
